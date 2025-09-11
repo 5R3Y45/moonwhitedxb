@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #032B44;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 900;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            color: #ccc;
+            margin-bottom: 40px;
+        }
+
+        .redirect-btn {
+            display: inline-block;
+            padding: clamp(10px, 2vw, 14px) clamp(20px, 5vw, 35px);
+            border-radius: 50px;
+            background-color: #ffffff;
+            color: #032B44;
+            font-weight: 600;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .redirect-btn:hover {
+            background-color: #ccc;
+            color: #032B44;
+        }
+
+        /* Subtle fade-in animation */
+        .fade-in {
+            animation: fadeIn 1s ease forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Extra spacing for very small screens */
+        @media (max-width: 400px) {
+            body {
+                padding: 15px;
+            }
+
+            .container {
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container fade-in">
+        <h1>Coming Soon</h1>
+        <p>We are working hard on our next venture. Stay tuned!</p>
+        <a href="our-brands.html" class="redirect-btn">Explore Our Brands</a>
+    </div>
+</body>
+
+</html>

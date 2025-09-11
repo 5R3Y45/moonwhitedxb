@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background: #032B44;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: clamp(6rem, 20vw, 12rem);
+            font-weight: 900;
+            color: #fff;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1 span {
+            display: inline-block;
+            animation: float 2s infinite ease-in-out;
+        }
+
+        h1 span:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        h1 span:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        p {
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            color: #ccc;
+            margin: 20px 0 40px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: clamp(10px, 2vw, 14px) clamp(20px, 5vw, 40px);
+            border-radius: 50px;
+            background: #fff;
+            color: #032B44;
+            font-weight: 700;
+            font-size: clamp(0.9rem, 2vw, 1.2rem);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #ccc;
+            color: #032B44;
+            transform: translateY(-3px);
+        }
+
+        /* Animated background circles */
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+            animation: floatCircle 10s infinite linear;
+        }
+
+        .circle:nth-child(1) {
+            width: clamp(80px, 15vw, 150px);
+            height: clamp(80px, 15vw, 150px);
+            background: #fff;
+            top: 10%;
+            left: 15%;
+        }
+
+        .circle:nth-child(2) {
+            width: clamp(120px, 25vw, 250px);
+            height: clamp(120px, 25vw, 250px);
+            background: #ccc;
+            top: 60%;
+            left: 70%;
+            animation-duration: 15s;
+        }
+
+        .circle:nth-child(3) {
+            width: clamp(50px, 10vw, 100px);
+            height: clamp(50px, 10vw, 100px);
+            background: #fff;
+            top: 30%;
+            left: 50%;
+            animation-duration: 12s;
+        }
+
+        @keyframes floatCircle {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+
+            50% {
+                transform: translateY(-50px) translateX(30px);
+            }
+
+            100% {
+                transform: translateY(0) translateX(0);
+            }
+        }
+
+        /* Mobile adjustments */
+        @media (max-width: 480px) {
+            .circle:nth-child(1) {
+                top: 5%;
+                left: 10%;
+            }
+
+            .circle:nth-child(2) {
+                top: 65%;
+                left: 60%;
+            }
+
+            .circle:nth-child(3) {
+                top: 25%;
+                left: 40%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <h1>
+        <span>4</span>
+        <span>0</span>
+        <span>4</span>
+    </h1>
+    <p>Oops! The page you're looking for doesn't exist.</p>
+    <a href="index.html" class="btn">Go Back Home</a>
+</body>
+
+</html>
